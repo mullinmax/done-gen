@@ -1,10 +1,10 @@
 import random
 
-from first_names_male import first_names_male
-from first_names_female import first_names_female
-from last_names import last_names
+from .first_names_male import first_names_male
+from .first_names_female import first_names_female
+from .last_names import last_names
 
-def get_weights(num, popularity=1):
+def get_weights(num, popularity:int=1):
     return [(num-i)**popularity for i in range(0, num)]
 
 def get_name(gender=None, popularity=1):
@@ -23,9 +23,9 @@ def get_name(gender=None, popularity=1):
 
     return first.capitalize(), last.capitalize()
 
-print(get_name(popularity=100))
-print(get_name(popularity=100))
-print(get_name(popularity=100))
-print(get_name(popularity=100))
-print(get_name(popularity=100))
-print(get_name(popularity=100))
+# print(get_name(popularity=100))
+# print(get_name(popularity=100))
+# print(get_name(popularity=100))
+# print(get_name(popularity=100))
+# print(get_name(popularity=100))
+# print(get_name(popularity=100))
