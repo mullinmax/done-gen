@@ -38,4 +38,4 @@ def interjection():
     return get_word_type('interj.')
 
 
-print(words())
+# print(words())
