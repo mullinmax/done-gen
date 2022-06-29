@@ -10,4 +10,6 @@ def index():
     gender = request.args.get('gender', None)
     return jsonify(names.get_name(gender=gender, popularity=popularity))
 
-app.run()
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="192.168.0.4", port=5000)
