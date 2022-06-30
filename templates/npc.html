@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}a form{% endblock %}
+
+{% block body %}
+<form action='/npc' method='POST'>
+  
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupSelect01">Diveristy of Name</label>
+    <select class="form-select" id="inputGroupSelect01" name="diveristy">
+      <option selected>Choose...</option>
+      <option value="0.5">Common</option>
+      <option value="0.75">Uncommon</option>
+      <option value="1">Rare</option>
+      <option value="2">Very Rare</option>
+      <option value="5">Unique</option>
+    </select>
+  </div>
+  
+  <fieldset class="row mb-3">
+    <legend class="col-form-label col-sm-2 pt-0">NPC gender</legend>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="" checked>
+        <label class="form-check-label" for="gridRadios1">
+          Any
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="male">
+        <label class="form-check-label" for="gridRadios2">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="female">
+        <label class="form-check-label" for="gridRadios3">
+          Female
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="submit" class="btn btn-success">Success</button>
+  
+</form>
+
+<!-- <label id='first_name' class="mdc-text-field mdc-text-field--filled">
+  <span class="mdc-text-field__ripple"></span>
+  <span class="mdc-floating-label">First Name</span>
+  <input type="text" class="mdc-text-field__input">
+  <span class="mdc-line-ripple"></span>
+</label> 
+
+<label id="last_name" class="mdc-text-field mdc-text-field--filled">
+  <span class="mdc-text-field__ripple"></span>
+  <span class="mdc-floating-label">Last Name</span>
+  <input type="text" class="mdc-text-field__input">
+  <span class="mdc-line-ripple"></span>
+</label> -->
+
+<p>first name: {{ first_name }}</p>
+<p>last name: {{ last_name }}</p>
+
+{% endblock %}
+
+{% block script %}
+<!-- <script>
+    mdc.textField.MDCTextField.attachTo(document.getElementById('first_name'));
+    mdc.textField.MDCTextField.attachTo(document.getElementById('last_name'));
+</script>     -->
+{% endblock %}
